@@ -1,10 +1,8 @@
-Yii2 Category
+Yii2 Site
 ===============
-[![Latest Stable Version](https://poser.pugx.org/nullref/yii2-category/v/stable)](https://packagist.org/packages/nullref/yii2-category) [![Total Downloads](https://poser.pugx.org/nullref/yii2-category/downloads)](https://packagist.org/packages/nullref/yii2-category) [![Latest Unstable Version](https://poser.pugx.org/nullref/yii2-category/v/unstable)](https://packagist.org/packages/nullref/yii2-category) [![License](https://poser.pugx.org/nullref/yii2-category/license)](https://packagist.org/packages/nullref/yii2-category)
+[![Latest Stable Version](https://poser.pugx.org/nullref/yii2-multisite/v/stable)](https://packagist.org/packages/nullref/yii2-multisite) [![Total Downloads](https://poser.pugx.org/nullref/yii2-multisite/downloads)](https://packagist.org/packages/nullref/yii2-multisite) [![Latest Unstable Version](https://poser.pugx.org/nullref/yii2-multisite/v/unstable)](https://packagist.org/packages/nullref/yii2-multisite) [![License](https://poser.pugx.org/nullref/yii2-multisite/license)](https://packagist.org/packages/nullref/yii2-multisite)
 
-Module for categories (WIP)
-
-![](https://raw.githubusercontent.com/NullRefExcep/yii2-category/master/docs/assets/screen-demo.gif)
+Module for multi site (WIP)
 
 Installation
 ------------
@@ -14,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist nullref/yii2-category "*"
+php composer.phar require --prefer-dist nullref/yii2-multisite "*"
 ```
 
 or add
 
 ```
-"nullref/yii2-category": "*"
+"nullref/yii2-multisite": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -28,7 +26,7 @@ to the require section of your `composer.json` file.
 Then You have run console command for install this module:
 
 ```
-php yii module/install nullref/yii2-category
+php yii module/install nullref/yii2-multisite
 ```
 
 and module will be added to your application config (`@app/config/installed_modules.php`)
@@ -45,11 +43,11 @@ Models overriding
 
 ```php
 
-    'category' => [
-        'class' => 'nullref\category\Module',
+    'multisite' => [
+        'class' => 'nullref\multisite\Module',
         'classMap' => [
-            'Category' => 'app\models\Category',
-            'CategoryQuery' => 'app\models\CategoryQuery',
+            'Site' => 'app\models\Site',
+            'SiteQuery' => 'app\models\SiteQuery',
         ],
     ],
 ```
@@ -58,6 +56,6 @@ Also you have to add module to bootstrap list of application:
 
 ```php
 ...
-'bootstrap' => ['category',...],
+'bootstrap' => ['multisite',...],
 ...
 ```
