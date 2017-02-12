@@ -5,7 +5,7 @@ namespace nullref\multisite\controllers\admin;
 use Yii;
 use nullref\multisite\models\Site;
 use yii\data\ActiveDataProvider;
-use yii\web\Controller;
+use nullref\admin\components\AdminController as Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
