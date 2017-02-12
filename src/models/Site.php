@@ -2,15 +2,17 @@
 
 namespace nullref\multisite\models;
 
+use nullref\multisite\src\models\SiteQuery;
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "site".
  *
  * @property integer $id
- * @property string $baseUrl
+ * @property string $host
  */
-class Site extends \yii\db\ActiveRecord
+class Site extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -22,11 +24,20 @@ class Site extends \yii\db\ActiveRecord
 
     /**
      * @inheritdoc
+     * @return SiteQuery the newly created [[SiteQuery]] instance.
+     */
+    public static function find()
+    {
+        return Yii::createObject(SiteQuery::className(), [get_called_class()]);
+    }
+
+    /**
+     * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['baseUrl'], 'string', 'max' => 255],
+            [['host'], 'string', 'max' => 255],
         ];
     }
 
@@ -37,7 +48,7 @@ class Site extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'baseUrl' => 'Base Url',
+            'host' => 'Host',
         ];
     }
 }

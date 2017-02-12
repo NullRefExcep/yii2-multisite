@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'baseUrl:url',
+            'host:url',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

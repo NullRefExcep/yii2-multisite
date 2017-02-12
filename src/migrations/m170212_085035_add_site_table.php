@@ -12,7 +12,7 @@ class m170212_085035_add_site_table extends Migration
     {
         $this->createTable('{{%site}}', [
             'id' => $this->primaryKey(),
-            'baseUrl' => $this->string(),
+            'host' => $this->string(),
         ]);
 
     }

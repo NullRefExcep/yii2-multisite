@@ -8,6 +8,7 @@
 
 namespace nullref\multisite\components;
 
+use nullref\multisite\models\Site;
 use Yii;
 use yii\base\Component;
 
@@ -17,10 +18,18 @@ class SiteManager extends Component
 
     public function init()
     {
-        $hostInfo = Yii::$app->request->getHostInfo();
+        $host = Yii::$app->request->getServerName();
 
-        if (null !== ($model = Site::find()->byHost($hostInfo)->one())) {
+        if (null !== ($model = Site::find()->byHost($host)->one())) {
             $this->_site = $model;
         }
+    }
+
+    /**
+     * @return null
+     */
+    public function getSite()
+    {
+        return $this->_site;
     }
 }
