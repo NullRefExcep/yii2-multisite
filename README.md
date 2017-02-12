@@ -1,4 +1,4 @@
-Yii2 Site
+Yii2 Multisite
 ===============
 [![Latest Stable Version](https://poser.pugx.org/nullref/yii2-multisite/v/stable)](https://packagist.org/packages/nullref/yii2-multisite) [![Total Downloads](https://poser.pugx.org/nullref/yii2-multisite/downloads)](https://packagist.org/packages/nullref/yii2-multisite) [![Latest Unstable Version](https://poser.pugx.org/nullref/yii2-multisite/v/unstable)](https://packagist.org/packages/nullref/yii2-multisite) [![License](https://poser.pugx.org/nullref/yii2-multisite/license)](https://packagist.org/packages/nullref/yii2-multisite)
 
