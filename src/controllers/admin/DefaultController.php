@@ -1,18 +1,18 @@
 <?php
 
-namespace nullref\multisite\controllers;
+namespace nullref\multisite\controllers\admin;
 
 use Yii;
-use app\models\Site;
+use nullref\multisite\models\Site;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * SiteController implements the CRUD actions for Site model.
+ * DefaultController implements the CRUD actions for Site model.
  */
-class SiteController extends Controller
+class DefaultController extends Controller
 {
     /**
      * @inheritdoc
