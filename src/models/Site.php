@@ -2,7 +2,6 @@
 
 namespace nullref\multisite\models;
 
-use nullref\multisite\src\models\SiteQuery;
 use Yii;
 use yii\db\ActiveRecord;
 
@@ -10,7 +9,9 @@ use yii\db\ActiveRecord;
  * This is the model class for table "site".
  *
  * @property integer $id
+ * @property string $name
  * @property string $host
+ * @property boolean is_default
  */
 class Site extends ActiveRecord
 {
@@ -37,7 +38,9 @@ class Site extends ActiveRecord
     public function rules()
     {
         return [
-            [['host'], 'string', 'max' => 255],
+            [['host', 'name'], 'string', 'max' => 255],
+            [['host', 'name'], 'required'],
+            ['is_default', 'boolean'],
         ];
     }
 
@@ -49,6 +52,8 @@ class Site extends ActiveRecord
         return [
             'id' => 'ID',
             'host' => 'Host',
+            'name' => 'Name',
+            'is_default' => 'Is Default',
         ];
     }
 }

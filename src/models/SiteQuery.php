@@ -5,7 +5,7 @@
  */
 
 
-namespace nullref\multisite\src\models;
+namespace nullref\multisite\models;
 
 
 use yii\db\ActiveQuery;
@@ -19,5 +19,13 @@ class SiteQuery extends ActiveQuery
     public function byHost($host)
     {
         return $this->andWhere(['host' => $host]);
+    }
+
+    /**
+     * @return $this
+     */
+    public function isDefault()
+    {
+        return $this->andWhere(['is_default' => true]);
     }
 }
