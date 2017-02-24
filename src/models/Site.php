@@ -2,6 +2,7 @@
 
 namespace nullref\multisite\models;
 
+use nullref\useful\DropDownTrait;
 use Yii;
 use yii\db\ActiveRecord;
 
@@ -15,6 +16,8 @@ use yii\db\ActiveRecord;
  */
 class Site extends ActiveRecord
 {
+    use DropDownTrait;
+
     /**
      * @inheritdoc
      */
