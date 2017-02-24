@@ -40,7 +40,7 @@ class SiteManager extends Component
             return $this->_site;
         }
         if ($this->_site === null) {
-            return $this->getDefaultSite();
+            $this->getDefaultSite();
         }
         return $this->_site;
     }
