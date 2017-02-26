@@ -35,10 +35,6 @@ class SiteManager extends Component
      */
     public function getSite()
     {
-        if ($this->getIsAdmin()) {
-
-            return $this->_site;
-        }
         if ($this->_site === null) {
             $this->getDefaultSite();
         }
