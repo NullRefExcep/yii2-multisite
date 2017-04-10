@@ -23,10 +23,14 @@ class SiteManager extends Component
      */
     public function init()
     {
-        $host = Yii::$app->request->getServerName();
+        if (is_a(Yii::$app, 'yii\console\Application')) {
+            $this->getDefaultSite();
+        } else {
+            $host = Yii::$app->request->getServerName();
 
-        if (null !== ($model = Site::find()->byHost($host)->one())) {
-            $this->_site = $model;
+            if (null !== ($model = Site::find()->byHost($host)->one())) {
+                $this->_site = $model;
+            }
         }
     }
 

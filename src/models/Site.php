@@ -53,10 +53,10 @@ class Site extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'host' => 'Host',
-            'name' => 'Name',
-            'is_default' => 'Is Default',
+            'id' => Yii::t('mulisite', 'ID'),
+            'host' => Yii::t('mulisite', 'Host'),
+            'name' => Yii::t('mulisite', 'Name'),
+            'is_default' => Yii::t('mulisite', 'Is Default'),
         ];
     }
 }
