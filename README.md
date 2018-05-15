@@ -32,6 +32,8 @@ php yii module/install nullref/yii2-multisite
 Pay attention that if you don't use our [application template](https://github.com/NullRefExcep/yii2-boilerplate) 
 it needs to change config files structure to have ability run commands that show above.
 
+Please check this [documentation section](https://github.com/NullRefExcep/yii2-core#config-structure)
+
 You need to add module to bootstrap list of application:
 
 ```php
