@@ -29,7 +29,8 @@ Then You have run console command for install this module:
 php yii module/install nullref/yii2-multisite
 ```
 
-and module will be added to your application config (`@app/config/installed_modules.php`)
+Pay attention that if you don't use our [application template](https://github.com/NullRefExcep/yii2-boilerplate) 
+it needs to change config files structure to have ability run commands that show above.
 
 Using with admin module
 ----------------------------
